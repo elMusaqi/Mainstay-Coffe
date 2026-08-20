@@ -1,0 +1,1687 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#0f172a"
+    >
+
+    <title>Mainstay Coffee</title>
+
+    <link
+        id="favicon"
+        rel="icon"
+        href=""
+    >
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+<body>
+
+<!-- =========================================================
+     TOPBAR
+     ========================================================= -->
+
+<header class="topbar">
+
+    <div class="brand">
+
+        <div class="brand-mark">
+
+            <img
+                id="brandLogo"
+                src=""
+                alt="Logo Mainstay Coffee"
+            >
+
+            <span id="brandLogoFallback">MC</span>
+
+        </div>
+
+        <div class="brand-information">
+
+            <h1 id="brandName">
+                Mainstay Coffee
+            </h1>
+
+            <p id="brandTagline">
+                Coffee, Comfort & Good Moments
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="topbar-tools">
+
+        <div
+            id="storeStatus"
+            class="store-status is-open"
+        >
+            <span>●</span>
+            <b id="storeStatusText">BUKA</b>
+        </div>
+
+        <div
+            id="liveClock"
+            class="live-clock"
+        >
+            Memuat waktu...
+        </div>
+
+        <button
+            id="btnMember"
+            class="btn btn-ghost"
+            type="button"
+        >
+            Loyalty Member
+        </button>
+
+        <button
+            id="btnInternal"
+            class="btn btn-amber"
+            type="button"
+        >
+            Internal Portal Login
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     ANNOUNCEMENT
+     ========================================================= -->
+
+<div
+    id="announcementBar"
+    class="announcement"
+>
+
+    <div class="announcement-track">
+
+        <span id="announcementText">
+            Selamat datang di Mainstay Coffee.
+        </span>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     MAIN
+     ========================================================= -->
+
+<main>
+
+    <!-- PROMO -->
+
+    <section class="page-section">
+
+        <div
+            id="promoCarousel"
+            class="promo-carousel"
+        >
+
+            <div
+                id="promoSlides"
+                class="promo-slides"
+            ></div>
+
+            <button
+                id="promoPrev"
+                class="carousel-control prev"
+                type="button"
+                aria-label="Banner sebelumnya"
+            >
+                ‹
+            </button>
+
+            <button
+                id="promoNext"
+                class="carousel-control next"
+                type="button"
+                aria-label="Banner berikutnya"
+            >
+                ›
+            </button>
+
+            <div
+                id="promoDots"
+                class="carousel-dots"
+            ></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- KATALOG -->
+
+    <section class="page-section">
+
+        <div class="section-head">
+
+            <div>
+
+                <span class="eyebrow">
+                    Mainstay Coffee
+                </span>
+
+                <h2>
+                    Menu Kami
+                </h2>
+
+                <p class="muted">
+                    Pilih menu favoritmu dan tambahkan
+                    langsung ke keranjang.
+                </p>
+
+            </div>
+
+            <div
+                id="categoryTabs"
+                class="category-tabs"
+            ></div>
+
+        </div>
+
+
+        <div
+            id="catalogGrid"
+            class="catalog-grid"
+        ></div>
+
+    </section>
+
+
+    <!-- POS -->
+
+    <section
+        id="posSection"
+        class="page-section hidden"
+    >
+
+        <div class="section-head">
+
+            <div>
+
+                <span class="eyebrow">
+                    Point of Sale
+                </span>
+
+                <h2>
+                    POS Kasir
+                </h2>
+
+                <p class="muted">
+                    Gunakan katalog yang sama untuk
+                    transaksi pelanggan di tempat.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="pos-layout">
+
+            <div class="panel">
+
+                <div class="panel-head">
+
+                    <div>
+                        <h3>Katalog POS</h3>
+
+                        <p class="muted">
+                            Klik Tambah untuk memasukkan
+                            menu ke keranjang.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="posCategoryTabs"
+                    class="category-tabs"
+                ></div>
+
+                <div
+                    id="posCatalogGrid"
+                    class="catalog-grid compact"
+                ></div>
+
+            </div>
+
+
+            <aside class="panel cart-panel">
+
+                <div class="panel-head">
+
+                    <div>
+
+                        <h3>
+                            Keranjang
+                        </h3>
+
+                        <p
+                            id="cartCount"
+                            class="muted"
+                        >
+                            0 item
+                        </p>
+
+                    </div>
+
+                    <button
+                        id="clearCart"
+                        class="btn btn-small btn-danger"
+                        type="button"
+                    >
+                        Kosongkan
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="cartItems"
+                    class="cart-items"
+                ></div>
+
+
+                <div class="form-section">
+
+                    <h4>
+                        Data Pelanggan
+                    </h4>
+
+                    <div class="form-grid">
+
+                        <label>
+                            Nama
+                            <input
+                                id="customerName"
+                                type="text"
+                                placeholder="Nama pelanggan"
+                            >
+                        </label>
+
+                        <label>
+                            No. WhatsApp
+                            <input
+                                id="customerPhone"
+                                type="tel"
+                                placeholder="08xxxxxxxxxx"
+                            >
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-section">
+
+                    <h4>
+                        Voucher
+                    </h4>
+
+                    <div class="input-group">
+
+                        <input
+                            id="voucherCode"
+                            type="text"
+                            placeholder="Kode voucher"
+                        >
+
+                        <button
+                            id="applyVoucher"
+                            class="btn btn-ghost"
+                            type="button"
+                        >
+                            Pakai
+                        </button>
+
+                    </div>
+
+                    <div
+                        id="activeVoucher"
+                        class="active-voucher hidden"
+                    ></div>
+
+                </div>
+
+
+                <div class="form-section">
+
+                    <h4>
+                        Metode Pembayaran
+                    </h4>
+
+                    <select id="paymentMethod">
+
+                        <option value="Tunai">
+                            Tunai
+                        </option>
+
+                        <option value="QRIS">
+                            QRIS
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="summary">
+
+                    <div>
+                        <span>Subtotal</span>
+                        <strong id="cartSubtotal">
+                            Rp0
+                        </strong>
+                    </div>
+
+                    <div>
+                        <span>Diskon</span>
+                        <strong id="cartDiscount">
+                            Rp0
+                        </strong>
+                    </div>
+
+                    <div class="summary-total">
+                        <span>Total</span>
+                        <strong id="cartTotal">
+                            Rp0
+                        </strong>
+                    </div>
+
+                </div>
+
+
+                <button
+                    id="processPayment"
+                    class="btn btn-amber btn-large"
+                    type="button"
+                >
+                    Proses Bayar
+                </button>
+
+            </aside>
+
+        </div>
+
+    </section>
+
+
+    <!-- DASHBOARD OWNER -->
+
+    <section
+        id="dashboardSection"
+        class="page-section hidden"
+    >
+
+        <div class="section-head">
+
+            <div>
+
+                <span class="eyebrow">
+                    Control Centralized
+                </span>
+
+                <h2>
+                    Dashboard Owner
+                </h2>
+
+                <p class="muted">
+                    Kelola branding, voucher, loyalty,
+                    owner, staf, dan database.
+                </p>
+
+            </div>
+
+            <div class="dashboard-actions">
+
+                <button
+                    id="closeDashboard"
+                    class="btn btn-ghost"
+                    type="button"
+                >
+                    Tutup
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- STATISTICS -->
+
+        <div class="stats-grid">
+
+            <div class="stat-card">
+
+                <span>Total Transaksi</span>
+
+                <strong id="statTransactions">
+                    0
+                </strong>
+
+            </div>
+
+            <div class="stat-card">
+
+                <span>Total Member</span>
+
+                <strong id="statMembers">
+                    0
+                </strong>
+
+            </div>
+
+            <div class="stat-card">
+
+                <span>Total Stempel</span>
+
+                <strong id="statStamps">
+                    0
+                </strong>
+
+            </div>
+
+            <div class="stat-card">
+
+                <span>Total Staf</span>
+
+                <strong id="statStaff">
+                    0
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- DASHBOARD TABS -->
+
+        <div
+            id="dashboardTabs"
+            class="dashboard-tabs"
+        >
+
+            <button
+                class="dashboard-tab active"
+                data-tab="branding"
+                type="button"
+            >
+                Branding
+            </button>
+
+            <button
+                class="dashboard-tab"
+                data-tab="voucher"
+                type="button"
+            >
+                Voucher
+            </button>
+
+            <button
+                class="dashboard-tab"
+                data-tab="loyalty"
+                type="button"
+            >
+                Loyalty
+            </button>
+
+            <button
+                class="dashboard-tab"
+                data-tab="people"
+                type="button"
+            >
+                Owner & Staf
+            </button>
+
+            <button
+                class="dashboard-tab"
+                data-tab="master"
+                type="button"
+            >
+                Master Data
+            </button>
+
+        </div>
+
+
+        <!-- BRANDING -->
+
+        <div
+            id="tab-branding"
+            class="dashboard-tab-content active"
+        >
+
+            <div class="panel">
+
+                <div class="panel-head">
+
+                    <div>
+
+                        <h3>
+                            Custom Web Branding
+                        </h3>
+
+                        <p class="muted">
+                            Perubahan langsung diterapkan
+                            ke katalog.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <label>
+                        Nama Resto
+                        <input
+                            id="settingName"
+                            type="text"
+                        >
+                    </label>
+
+                    <label>
+                        Tagline
+                        <input
+                            id="settingTagline"
+                            type="text"
+                        >
+                    </label>
+
+                    <label>
+                        No. WA Universal
+                        <input
+                            id="settingPhone"
+                            type="tel"
+                            placeholder="628xxxxxxxxxx"
+                        >
+                    </label>
+
+                    <label>
+                        Link WA Broadcast
+                        <input
+                            id="settingBroadcast"
+                            type="url"
+                            placeholder="https://wa.me/..."
+                        >
+                    </label>
+
+                    <label class="full">
+                        Teks Kebijakan / Catatan
+                        <textarea
+                            id="settingPolicy"
+                            placeholder="Tulis kebijakan atau catatan resto..."
+                        ></textarea>
+                    </label>
+
+                    <label class="full">
+                        Running Text
+                        <input
+                            id="settingAnnouncement"
+                            type="text"
+                        >
+                    </label>
+
+                    <label class="full checkbox-label">
+                        <input
+                            id="settingAnnouncementEnabled"
+                            type="checkbox"
+                        >
+                        Aktifkan Running Text
+                    </label>
+
+                    <label>
+                        Logo — URL
+                        <input
+                            id="settingLogoUrl"
+                            type="url"
+                            placeholder="https://..."
+                        >
+                    </label>
+
+                    <label>
+                        Logo — File Lokal
+                        <input
+                            id="settingLogoFile"
+                            type="file"
+                            accept="image/*"
+                        >
+                    </label>
+
+                    <label>
+                        Favicon — URL
+                        <input
+                            id="settingFaviconUrl"
+                            type="url"
+                            placeholder="https://..."
+                        >
+                    </label>
+
+                    <label>
+                        Favicon — File Lokal
+                        <input
+                            id="settingFaviconFile"
+                            type="file"
+                            accept="image/*"
+                        >
+                    </label>
+
+                    <label>
+                        QRIS — URL
+                        <input
+                            id="settingQrisUrl"
+                            type="url"
+                            placeholder="https://..."
+                        >
+                    </label>
+
+                    <label>
+                        QRIS — File Lokal
+                        <input
+                            id="settingQrisFile"
+                            type="file"
+                            accept="image/*"
+                        >
+                    </label>
+
+                    <label class="full">
+                        Google Maps Embed Link
+                        <input
+                            id="settingMap"
+                            type="url"
+                            placeholder="https://www.google.com/maps/embed?..."
+                        >
+                    </label>
+
+                </div>
+
+
+                <div class="button-row">
+
+                    <button
+                        id="saveBranding"
+                        class="btn btn-amber"
+                        type="button"
+                    >
+                        Simpan Branding
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- VOUCHER -->
+
+        <div
+            id="tab-voucher"
+            class="dashboard-tab-content"
+        >
+
+            <div class="panel">
+
+                <div class="panel-head">
+
+                    <div>
+
+                        <h3>
+                            Control Voucher
+                        </h3>
+
+                        <p class="muted">
+                            Tambah atau edit voucher
+                            diskon pelanggan.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <label>
+                        Kode Voucher
+                        <input
+                            id="voucherAdminCode"
+                            type="text"
+                            placeholder="WELCOME10"
+                        >
+                    </label>
+
+                    <label>
+                        Tipe Diskon
+                        <select id="voucherAdminType">
+
+                            <option value="percent">
+                                Persentase %
+                            </option>
+
+                            <option value="nominal">
+                                Nominal Rp
+                            </option>
+
+                        </select>
+                    </label>
+
+                    <label>
+                        Nilai Diskon
+                        <input
+                            id="voucherAdminValue"
+                            type="number"
+                            min="0"
+                            step="1"
+                        >
+                    </label>
+
+                    <label>
+                        Target
+                        <select id="voucherAdminTarget">
+
+                            <option value="all">
+                                Semua Orang
+                            </option>
+
+                            <option value="specific">
+                                No. WA Spesifik
+                            </option>
+
+                        </select>
+                    </label>
+
+                    <label>
+                        No. WA Target
+                        <input
+                            id="voucherAdminPhone"
+                            type="tel"
+                            placeholder="Kosongkan jika semua"
+                        >
+                    </label>
+
+                    <label class="checkbox-label">
+                        <input
+                            id="voucherAdminActive"
+                            type="checkbox"
+                            checked
+                        >
+                        Aktif
+                    </label>
+
+                </div>
+
+
+                <div class="button-row">
+
+                    <button
+                        id="saveVoucher"
+                        class="btn btn-amber"
+                        type="button"
+                    >
+                        Simpan Voucher
+                    </button>
+
+                    <button
+                        id="cancelVoucherEdit"
+                        class="btn btn-ghost hidden"
+                        type="button"
+                    >
+                        Batal Edit
+                    </button>
+
+                </div>
+
+
+                <div class="table-wrap">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Kode</th>
+                                <th>Diskon</th>
+                                <th>Target</th>
+                                <th>Status</th>
+                                <th>Aksi</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="voucherTable"></tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- LOYALTY -->
+
+        <div
+            id="tab-loyalty"
+            class="dashboard-tab-content"
+        >
+
+            <div class="panel">
+
+                <div class="panel-head">
+
+                    <div>
+
+                        <h3>
+                            Loyalty Stamp Settings
+                        </h3>
+
+                        <p class="muted">
+                            Atur syarat transaksi dan
+                            masa berlaku hadiah.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <label>
+                        Minimal Belanja untuk 1 Stempel
+                        <input
+                            id="loyaltyMinimum"
+                            type="number"
+                            min="0"
+                            step="1000"
+                        >
+                    </label>
+
+                    <label>
+                        Target Stempel Penuh
+                        <input
+                            id="loyaltyTarget"
+                            type="number"
+                            min="1"
+                            step="1"
+                        >
+                    </label>
+
+                    <label>
+                        Masa Voucher Hadiah
+                        <input
+                            id="loyaltyExpiryValue"
+                            type="number"
+                            min="1"
+                        >
+                    </label>
+
+                    <label>
+                        Satuan Masa Berlaku
+                        <select id="loyaltyExpiryUnit">
+
+                            <option value="hours">
+                                Jam
+                            </option>
+
+                            <option value="days">
+                                Hari
+                            </option>
+
+                        </select>
+                    </label>
+
+                </div>
+
+
+                <div class="button-row">
+
+                    <button
+                        id="saveLoyalty"
+                        class="btn btn-amber"
+                        type="button"
+                    >
+                        Simpan Loyalty
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- OWNER & STAFF -->
+
+        <div
+            id="tab-people"
+            class="dashboard-tab-content"
+        >
+
+            <div class="panel">
+
+                <div class="panel-head">
+
+                    <div>
+
+                        <h3>
+                            Profil Owner Master
+                        </h3>
+
+                        <p class="muted">
+                            Owner tidak menggunakan absensi kamera.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <label>
+                        Nama Owner
+                        <input
+                            id="ownerName"
+                            type="text"
+                        >
+                    </label>
+
+                    <label>
+                        PIN Owner
+                        <input
+                            id="ownerPin"
+                            type="password"
+                            inputmode="numeric"
+                        >
+                    </label>
+
+                    <label>
+                        No. WA Owner
+                        <input
+                            id="ownerPhone"
+                            type="tel"
+                        >
+                    </label>
+
+                </div>
+
+
+                <div class="button-row">
+
+                    <button
+                        id="saveOwner"
+                        class="btn btn-amber"
+                        type="button"
+                    >
+                        Simpan Owner
+                    </button>
+
+                    <a
+                        id="ownerDirectWa"
+                        class="btn btn-ghost"
+                        href="#"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        Direct WA
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="panel">
+
+                <div class="panel-head">
+
+                    <div>
+
+                        <h3>
+                            Profil Staf / Kasir
+                        </h3>
+
+                        <p class="muted">
+                            Full CRUD profil staf.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+                    <label>
+                        Nama Staf
+                        <input
+                            id="staffName"
+                            type="text"
+                        >
+                    </label>
+
+                    <label>
+                        PIN Kasir
+                        <input
+                            id="staffPin"
+                            type="password"
+                            inputmode="numeric"
+                        >
+                    </label>
+
+                    <label>
+                        No. WA
+                        <input
+                            id="staffPhone"
+                            type="tel"
+                        >
+                    </label>
+
+                    <label>
+                        Kategori Gaji
+                        <select id="staffSalaryCategory">
+
+                            <option value="Bulanan">
+                                Bulanan
+                            </option>
+
+                            <option value="Mingguan">
+                                Mingguan
+                            </option>
+
+                            <option value="Harian">
+                                Harian
+                            </option>
+
+                            <option value="Per Jam">
+                                Per Jam
+                            </option>
+
+                        </select>
+                    </label>
+
+                    <label>
+                        Nominal Gaji
+                        <input
+                            id="staffSalary"
+                            type="number"
+                            min="0"
+                        >
+                    </label>
+
+                </div>
+
+
+                <div class="button-row">
+
+                    <button
+                        id="saveStaff"
+                        class="btn btn-amber"
+                        type="button"
+                    >
+                        Tambah Staf
+                    </button>
+
+                    <button
+                        id="cancelStaffEdit"
+                        class="btn btn-ghost hidden"
+                        type="button"
+                    >
+                        Batal Edit
+                    </button>
+
+                </div>
+
+
+                <div class="table-wrap">
+
+                    <table>
+
+                        <thead>
+
+                            <tr>
+                                <th>Nama</th>
+                                <th>No. WA</th>
+                                <th>Gaji</th>
+                                <th>Aksi</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody id="staffTable"></tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- MASTER DATA -->
+
+        <div
+            id="tab-master"
+            class="dashboard-tab-content"
+        >
+
+            <div class="backup-grid">
+
+                <button
+                    id="openMasterData"
+                    class="backup-card"
+                    type="button"
+                >
+                    <span class="backup-icon">
+                        📊
+                    </span>
+
+                    <strong>
+                        Buka Master Data Spreadsheet
+                    </strong>
+
+                    <small>
+                        Menampilkan seluruh data transaksi,
+                        member, stempel, dan staf.
+                    </small>
+
+                </button>
+
+
+                <button
+                    id="downloadBackup"
+                    class="backup-card"
+                    type="button"
+                >
+                    <span class="backup-icon">
+                        💾
+                    </span>
+
+                    <strong>
+                        Download JSON System Backup
+                    </strong>
+
+                    <small>
+                        Simpan snapshot database lengkap.
+                    </small>
+
+                </button>
+
+
+                <label class="backup-card">
+
+                    <span class="backup-icon">
+                        ♻️
+                    </span>
+
+                    <strong>
+                        Restore JSON
+                    </strong>
+
+                    <small>
+                        Pilih file backup JSON.
+                    </small>
+
+                    <input
+                        id="restoreBackup"
+                        type="file"
+                        accept=".json,application/json"
+                    >
+
+                </label>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="site-footer">
+
+    <div class="footer-content">
+
+        <div>
+
+            <strong id="footerBrand">
+                Mainstay Coffee
+            </strong>
+
+            <p id="footerPolicy">
+                Terima kasih telah berkunjung.
+            </p>
+
+        </div>
+
+
+        <div class="social-links">
+
+            <a
+                id="socialInstagram"
+                href="#"
+                target="_blank"
+                rel="noopener"
+                aria-label="Instagram"
+            >
+                IG
+            </a>
+
+            <a
+                id="socialTiktok"
+                href="#"
+                target="_blank"
+                rel="noopener"
+                aria-label="TikTok"
+            >
+                TT
+            </a>
+
+            <a
+                id="socialWhatsapp"
+                href="#"
+                target="_blank"
+                rel="noopener"
+                aria-label="WhatsApp"
+            >
+                WA
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div
+        id="googleMap"
+        class="google-map"
+    >
+
+        <div class="map-empty">
+            Google Maps belum diatur dari Dashboard Owner.
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © <span id="footerYear"></span>
+            Mainstay Coffee
+        </span>
+
+        <span>
+            Slate & Amber Clean
+        </span>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================================================
+     MEMBER MODAL
+     ========================================================= -->
+
+<div
+    id="memberModal"
+    class="modal hidden"
+>
+
+    <div class="modal-card">
+
+        <button
+            class="modal-close"
+            data-close="memberModal"
+            type="button"
+        >
+            ×
+        </button>
+
+        <div class="modal-head">
+
+            <h2>
+                Loyalty Member
+            </h2>
+
+            <p>
+                Daftar member atau cek stempel digital.
+            </p>
+
+        </div>
+
+
+        <div class="modal-section">
+
+            <h3>
+                Daftar Member
+            </h3>
+
+            <label>
+                Nama
+                <input
+                    id="memberRegisterName"
+                    type="text"
+                    placeholder="Nama lengkap"
+                >
+            </label>
+
+            <label>
+                No. WhatsApp
+                <input
+                    id="memberRegisterPhone"
+                    type="tel"
+                    placeholder="08xxxxxxxxxx"
+                >
+            </label>
+
+            <button
+                id="registerMember"
+                class="btn btn-amber btn-large"
+                type="button"
+            >
+                Daftar Member
+            </button>
+
+        </div>
+
+
+        <div class="form-section"></div>
+
+
+        <div class="modal-section">
+
+            <h3>
+                Cek Stem Member
+            </h3>
+
+            <label>
+                No. WhatsApp
+                <input
+                    id="memberCheckPhone"
+                    type="tel"
+                    placeholder="08xxxxxxxxxx"
+                >
+            </label>
+
+            <button
+                id="checkMember"
+                class="btn btn-ghost btn-large"
+                type="button"
+            >
+                Cek Stem
+            </button>
+
+            <div
+                id="stampResult"
+                class="stamp-result"
+            ></div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     INTERNAL LOGIN MODAL
+     ========================================================= -->
+
+<div
+    id="loginModal"
+    class="modal hidden"
+>
+
+    <div class="modal-card modal-small">
+
+        <button
+            class="modal-close"
+            data-close="loginModal"
+            type="button"
+        >
+            ×
+        </button>
+
+        <div class="modal-head">
+
+            <h2>
+                Internal Portal
+            </h2>
+
+            <p>
+                Login Owner atau Staf/Kasir.
+            </p>
+
+        </div>
+
+
+        <div class="modal-section">
+
+            <label>
+                PIN
+                <input
+                    id="loginPin"
+                    type="password"
+                    inputmode="numeric"
+                    placeholder="Masukkan PIN"
+                >
+            </label>
+
+            <button
+                id="loginSubmit"
+                class="btn btn-amber btn-large"
+                type="button"
+            >
+                Login
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     RECEIPT MODAL
+     ========================================================= -->
+
+<div
+    id="receiptModal"
+    class="modal hidden"
+>
+
+    <div class="modal-card modal-large">
+
+        <button
+            class="modal-close"
+            data-close="receiptModal"
+            type="button"
+        >
+            ×
+        </button>
+
+        <div class="modal-head">
+
+            <h2>
+                Transaksi Berhasil
+            </h2>
+
+            <p>
+                Draft WhatsApp dan struk thermal.
+            </p>
+
+        </div>
+
+
+        <div class="receipt-layout">
+
+            <div class="receipt-column">
+
+                <h3>
+                    Draft WhatsApp Lunas
+                </h3>
+
+                <textarea
+                    id="whatsappReceipt"
+                    readonly
+                ></textarea>
+
+                <div class="button-row">
+
+                    <button
+                        id="copyWhatsappReceipt"
+                        class="btn btn-ghost"
+                        type="button"
+                    >
+                        Copy Pesan
+                    </button>
+
+                    <a
+                        id="openWhatsappReceipt"
+                        class="btn btn-amber"
+                        href="#"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        Buka WhatsApp
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="receipt-column">
+
+                <h3>
+                    Struk Thermal 58mm
+                </h3>
+
+                <pre
+                    id="thermalReceipt"
+                    class="thermal-receipt"
+                ></pre>
+
+                <button
+                    id="printReceipt"
+                    class="btn btn-amber btn-large"
+                    type="button"
+                >
+                    Cetak Struk
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     MASTER DATA MODAL
+     ========================================================= -->
+
+<div
+    id="masterDataModal"
+    class="modal hidden"
+>
+
+    <div class="modal-card modal-large">
+
+        <button
+            class="modal-close"
+            data-close="masterDataModal"
+            type="button"
+        >
+            ×
+        </button>
+
+        <div class="modal-head">
+
+            <h2>
+                Master Data
+            </h2>
+
+            <p>
+                Data sistem tersimpan di browser.
+            </p>
+
+        </div>
+
+
+        <div class="table-wrap">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Tabel</th>
+                        <th>Jumlah Data</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="masterDataTable"></tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =========================================================
+     TOAST
+     ========================================================= -->
+
+<div
+    id="toastRoot"
+    class="toast-root"
+></div>
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
